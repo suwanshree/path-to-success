@@ -131,4 +131,134 @@ table {
 
 /* ROOT VARIABLES */
 
+:root {
+  --teal: #4ca7c0;
+  --purple: #484fb7;
+  --lavender: #6b8fe7;
+  --yellow: #e9bb57;
+  --pink: #d9526f;
+  --dark-gray: #1e1e1e;
+  --white: #ffffff;
+  --black: #000000;
+  --maxw: 450px;
+}
+
 /* GLOBAL STYLES (mobile first/small) */
+
+html {
+  background-color: var(--lavender);
+}
+
+body {
+  font-family: "Inter", system-ui, Helvetica, Arial, sans-serif;
+  color: var(--white);
+  background-color: var(--purple);
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Kavoon";
+  font-size: 3em;
+}
+
+h2 {
+  font-family: "Kavoon";
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.15em;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0 2em 0;
+  margin-bottom: 0.5em;
+  gap: 1em;
+}
+
+header p {
+  font-style: italic;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--yellow);
+  padding: 1em 0 1em 0;
+  gap: 1em;
+}
+
+nav h2 {
+  font-family: "Inter";
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--dark-gray);
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+
+nav ul li {
+  box-sizing: border-box;
+  width: 90%;
+  background-color: var(--white);
+  padding: 1em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: blue;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+main > :first-child {
+  padding: 1em;
+}
+
+section > h2 {
+  padding-bottom: 0.2em;
+}
+
+article > h3 {
+  color: var(--yellow);
+  font-weight: bold;
+}
+
+article > div {
+  background-color: var(--white);
+  border-radius: 1em;
+  margin: 1em 0.5em 1em 0.5em;
+  padding: 1.5em;
+  line-height: 0.75cm;
+}
+
+div > h4 {
+  color: var(--purple);
+  font-weight: bold;
+}
+
+div > p {
+  color: var(--dark-gray);
+  font-weight: 500;
+}
