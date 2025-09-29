@@ -141,6 +141,7 @@ table {
   --white: #ffffff;
   --black: #000000;
   --maxw: 450px;
+  --radius: 1em;
 }
 
 /* GLOBAL STYLES (mobile first/small) */
@@ -179,6 +180,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 2em 0 2em 0;
   margin-bottom: 0.5em;
   gap: 1em;
@@ -186,6 +188,7 @@ header {
 
 header p {
   font-style: italic;
+  text-align: center;
 }
 
 nav {
@@ -232,7 +235,7 @@ nav ul li a {
   text-align: center;
 }
 
-main > :first-child {
+section {
   padding: 1em;
 }
 
@@ -247,7 +250,7 @@ article > h3 {
 
 article > div {
   background-color: var(--white);
-  border-radius: 1em;
+  border-radius: var(--radius);
   margin: 1em 0.5em 1em 0.5em;
   padding: 1.5em;
   line-height: 0.75cm;
@@ -261,4 +264,108 @@ div > h4 {
 div > p {
   color: var(--dark-gray);
   font-weight: 500;
+}
+
+main > section:nth-of-type(2n) {
+  background-color: var(--pink);
+}
+
+section > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1em;
+  margin-top: 0.75em;
+}
+
+section > ul > li {
+  border-radius: var(--radius);
+  padding: 2em 1em;
+  text-align: center;
+  font-weight: 700;
+  color: var(--dark-gray);
+}
+
+section > ul > li:nth-child(4n + 1) {
+  background: var(--teal);
+}
+
+section > ul > li:nth-child(4n + 2) {
+  background: var(--lavender);
+}
+
+section > ul > li:nth-child(4n + 3) {
+  background: var(--yellow);
+}
+
+section > ul > li:nth-child(4n) {
+  background: var(--white);
+}
+
+section > section {
+  padding: 0em;
+}
+
+section > h3 {
+  color: var(--yellow);
+  font-weight: 700;
+}
+
+table {
+  width: 250px;
+  margin: 0.5em auto;
+  background: var(--white);
+  border: 1.5px solid var(--yellow);
+}
+
+table thead > tr > th {
+  background: var(--yellow);
+  color: var(--dark-gray);
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1rem 0.8rem;
+  border: 1px solid var(--yellow);
+}
+
+table tbody > tr > th[scope="row"],
+table tbody > tr > td {
+  background: var(--white);
+  color: var(--dark-gray);
+  text-align: left;
+  font-weight: 500;
+  padding: 1rem 0.8rem;
+  border: 1px solid var(--yellow);
+}
+
+section > p {
+  line-height: 0.75cm;
+}
+
+section > p:last-child {
+  text-align: center;
+}
+
+section > p:last-child > a {
+  display: inline-block;
+  background: var(--white);
+  color: var(--dark-gray);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1em 7.5em;
+  border-radius: var(--radius);
+  box-shadow: 5px 5px 0 var(--dark-gray);
+}
+
+footer {
+  display: flex;
+  font-size: small;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+  padding: 4em 2em;
+}
+
+footer a {
+  color: var(--white);
 }
